@@ -1165,7 +1165,7 @@
     <group delimiter=" ">
       <text form="short" variable="authority"/>
       <choose>
-        <if variable="genre">
+        <if variable="container-title">
           <text text-case="capitalize-first" variable="genre"/>
         </if>
         <else>
@@ -1292,7 +1292,7 @@
   </macro>
   <macro name="description-format-short">
     <choose>
-      <if variable="genre">
+      <if variable="container-title">
         <text form="short" text-case="capitalize-first" variable="genre"/>
       </if>
       <else-if variable="medium">
@@ -2059,7 +2059,7 @@
   </macro>
   <macro name="legal-identifier-bill-report">
     <group delimiter=" ">
-      <text variable="genre"/>
+      <text variable="container-title"/>
       <choose>
         <if match="any" variable="authority chapter-number container-title">
           <text variable="number"/>
@@ -2147,7 +2147,7 @@
         <group delimiter=", ">
           <group delimiter=" ">
             <choose>
-              <if variable="genre">
+              <if variable="container-title">
                 <text text-case="capitalize-first" variable="genre"/>
               </if>
               <else>
@@ -2182,7 +2182,7 @@
   <macro name="legal-source-regulation">
     <group delimiter=", ">
       <group delimiter=" ">
-        <text variable="genre"/>
+        <text variable="container-title"/>
         <text macro="label-number-capitalized"/>
       </group>
       <group delimiter=" ">
@@ -2227,8 +2227,8 @@
           <group delimiter=", ">
             <group delimiter=" ">
               <choose>
-                <if variable="genre">
-                  <text variable="genre"/>
+                <if variable="container-title">
+                  <text variable="container-title"/>
                 </if>
                 <else>
                   <text value="Directive"/>
@@ -2257,8 +2257,8 @@
           <group delimiter=". " suffix=".">
             <group delimiter=" ">
               <choose>
-                <if variable="genre">
-                  <text variable="genre"/>
+                <if variable="container-title">
+                  <text variable="container-title"/>
                 </if>
                 <else>
                   <text value="Directive"/>
@@ -2318,6 +2318,7 @@
     </layout>
   </bibliography>
 </style>
+
 
 
 
